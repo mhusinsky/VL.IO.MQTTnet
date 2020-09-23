@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.IO.MQTTnet</id>
+    <version>0.0.1-alpha</version>
+    <title></title>
+    <authors>Matthias Husinsky</authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://github.com/mhusinsky/VL.IO.MQTTnet</projectUrl>
+    <description>An MQTT client for VL, based on MQTTnet.Extensions.ManagedClient.</description>
+    <summary>An MQTT client for VL, based on MQTTnet</summary>
+    <releaseNotes>Initial release</releaseNotes>
+    <dependencies>
+      <dependency id="MQTTnet.Extensions.ManagedClient" version="3.0.12" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="help\MQTT\HowTo Publish and Receive MQTT Messages.vl" target="help\MQTT\HowTo Publish and Receive MQTT Messages.vl" />
+    <file src="VL.IO.MQTTnet.vl" target="VL.IO.MQTTnet.vl" />
+  </files>
+</package>
