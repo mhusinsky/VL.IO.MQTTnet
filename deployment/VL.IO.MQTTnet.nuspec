@@ -16,7 +16,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="help\MQTT\HowTo Publish and Receive MQTT Messages.vl" target="help\MQTT\HowTo Publish and Receive MQTT Messages.vl" />
-    <file src="VL.IO.MQTTnet.vl" target="VL.IO.MQTTnet.vl" />
+    <file src="..\help\MQTT\HowTo Publish and Receive MQTT Messages.vl" target="help\MQTT\HowTo Publish and Receive MQTT Messages.vl" />
+    <file src="..\VL.IO.MQTTnet.vl" target="VL.IO.MQTTnet.vl" />
+	<file src="nugeticon.png" target="icon\" />
   </files>
 </package>
