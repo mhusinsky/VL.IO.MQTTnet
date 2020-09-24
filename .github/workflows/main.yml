@@ -20,6 +20,6 @@ jobs:
       uses: vvvv/PublishVLNuget@1.0.28
       with:
         nuspec: deployment\VL.IO.MQTTnet.nuspec
-        icon-src: nugeticon.png
+        icon-src: https://raw.githubusercontent.com/mhusinsky/VL.IO.MQTTnet/master/deployment/nugeticon.png
         icon-dst: icon\
         nuget-key: ${{ secrets.NUGET_KEY }}
