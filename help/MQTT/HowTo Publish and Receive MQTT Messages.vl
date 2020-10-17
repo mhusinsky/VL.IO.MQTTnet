@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="C7gvy7EFft0M3yMXuPkFdg" LanguageVersion="2020.1.7.184" Version="0.128">
-  <NugetDependency Id="BstwHM1stmzM4vksBJhktZ" Location="VL.CoreLib" Version="2020.1.7" />
+<Document xmlns:p="property" Id="C7gvy7EFft0M3yMXuPkFdg" LanguageVersion="2020.2.2.281" Version="0.128">
+  <NugetDependency Id="BstwHM1stmzM4vksBJhktZ" Location="VL.CoreLib" Version="2020.2.2" />
   <Patch Id="BZHqRunwJG8LAKHJZ9Fy9t">
     <Canvas Id="MtQFmd8s4jsMAPWy6G7qcN" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="KtJs5jv7y33Nmkej3IR5FL">
         <Canvas Id="DVjsl5iHHyIPgxOstmRshv" CanvasType="Group">
-          <Node Bounds="244,445,485,19" Id="UNczWIydOomNizubsVAbrL">
+          <Node Bounds="150,437,644,19" Id="UNczWIydOomNizubsVAbrL">
             <p:NodeReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="MQTTnet" />
@@ -24,6 +24,8 @@
             </p:NodeReference>
             <Pin Id="Ll7KjhQEYOIM9tqY7sWJuK" Name="Server" Kind="InputPin" />
             <Pin Id="LJuSNm7aLPXONDvHb4i6Vp" Name="Port" Kind="InputPin" />
+            <Pin Id="OgGO2RbQJbHOeZg8GXzxgZ" Name="UseWebSockets" Kind="InputPin" />
+            <Pin Id="OSqoKsnmmWiOAKO014SNSS" Name="Websocket URI" Kind="InputPin" />
             <Pin Id="J65RwMl1tQHLfcXqcCIDQC" Name="Auto Reconnect Delay" Kind="InputPin" />
             <Pin Id="AFabMfqVeRZQZZSyLJmyAW" Name="Username" Kind="InputPin" />
             <Pin Id="OAeAD7HmidbOcdBuoKtPDY" Name="Password" Kind="InputPin" />
@@ -45,9 +47,9 @@
             <Pin Id="Ty9RYkQuUFuMzkONWd7DsV" Name="Is Connected" Kind="OutputPin" />
             <Pin Id="GdP9e44Xo1OLgSR4coEdxj" Name="Pending Application Messages Count" Kind="OutputPin" />
           </Node>
-          <Pad Id="EBoSg256tnmMMZbURT6IXB" Comment="Is Started" Bounds="348,510,35,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="FSXLLTth64kNUSR9le4A5b" Comment="Is Connected" Bounds="513,510,35,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="RtiQ15XctccLM8wYwqSrOG" Comment="Enabled" Bounds="831,372,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="EBoSg256tnmMMZbURT6IXB" Comment="Is Started" Bounds="366,485,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="FSXLLTth64kNUSR9le4A5b" Comment="Is Connected" Bounds="578,485,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RtiQ15XctccLM8wYwqSrOG" Comment="Enabled" Bounds="897,356,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -92,17 +94,17 @@
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="T77UI1Ax1ClL1Jv9vTo2xP" Comment="Server" Bounds="246,299,121,15" ShowValueBox="true" isIOBox="true" Value="broker.hivemq.com">
+          <Pad Id="T77UI1Ax1ClL1Jv9vTo2xP" Comment="Server" Bounds="135,307,113,15" ShowValueBox="true" isIOBox="true" Value="broker.hivemq.com">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="RIKASeuawC8PYcBoSP0IxC" Comment="ClientID" Bounds="676,262,65,15" ShowValueBox="true" isIOBox="true" Value="vvvvuser">
+          <Pad Id="RIKASeuawC8PYcBoSP0IxC" Comment="ClientID" Bounds="749,246,65,15" ShowValueBox="true" isIOBox="true" Value="vvvvuser">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="Ipoypr7S2arPEh89R2Rij7" Comment="Pending Application Messages Count" Bounds="726,518,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Ipoypr7S2arPEh89R2Rij7" Comment="Pending Application Messages Count" Bounds="792,502,35,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="631,830,54,19" Id="VfEDb2EYBFOOd5Zj0knE28">
             <p:NodeReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -228,12 +230,12 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="C0IsFsvVcodPjcCLBljW2d" Comment="Auto Reconnect Delay" Bounds="353,366,35,15" ShowValueBox="true" isIOBox="true" Value="5">
+          <Pad Id="C0IsFsvVcodPjcCLBljW2d" Comment="Auto Reconnect Delay" Bounds="385,412,35,15" ShowValueBox="true" isIOBox="true" Value="5">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float64" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="674,299,25,19" Id="T9JnMuQpFC5OwFR4YKvE3e">
+          <Node Bounds="747,283,25,19" Id="T9JnMuQpFC5OwFR4YKvE3e">
             <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="+" />
@@ -243,7 +245,7 @@
             <Pin Id="JoaZ1ndqbSlNzg1HkCfbFf" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="1079,176,184,110" Id="GMqOzR9Gq3GM96qcyaL4Bz">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessStatefulRegion" Name="Cache" />
               <FullNameCategoryReference ID="Primitive" />
@@ -284,8 +286,8 @@
             </Patch>
             <ControlPoint Id="S91aX1G8ACkOFTcHZKmo2a" Bounds="1095,281" Alignment="Bottom" />
           </Node>
-          <Pad Id="TO2VQ4UsfJ3QEx1j4iFWPk" Comment="" Bounds="676,342,125,16" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="SdMgR5eHd18QNkljF60WRs" Bounds="724,542,206,99" ShowValueBox="true" isIOBox="true" Value="when not connected, the managed Client will store published messages internally to send them after the connection is re-established">
+          <Pad Id="TO2VQ4UsfJ3QEx1j4iFWPk" Comment="" Bounds="749,326,125,16" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SdMgR5eHd18QNkljF60WRs" Bounds="790,526,206,99" ShowValueBox="true" isIOBox="true" Value="when not connected, the managed Client will store published messages internally to send them after the connection is re-established">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -340,7 +342,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="JMRwZkwwKUJL2Qe3rQs3wC" Bounds="316,554,159,44" ShowValueBox="true" isIOBox="true" Value="The managed Client runs in its own thread">
+          <Pad Id="JMRwZkwwKUJL2Qe3rQs3wC" Bounds="382,538,159,44" ShowValueBox="true" isIOBox="true" Value="The managed Client runs in its own thread">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -349,7 +351,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="BNM79M54GluOxxQpsppXum" Bounds="507,554,133,38" ShowValueBox="true" isIOBox="true" Value="Are we connected to the broker?">
+          <Pad Id="BNM79M54GluOxxQpsppXum" Bounds="573,538,133,38" ShowValueBox="true" isIOBox="true" Value="Are we connected to the broker?">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -358,35 +360,35 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="KVaxrW1IYusOpsSrRFYgKL" Comment="Port" Bounds="299,332,35,15" ShowValueBox="true" isIOBox="true" Value="1883">
+          <Pad Id="KVaxrW1IYusOpsSrRFYgKL" Comment="Port" Bounds="208,333,35,15" ShowValueBox="true" isIOBox="true" Value="1883">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="DxoOmi3rXbOMWRIofcwvhd" Bounds="290,75,191,99" ShowValueBox="true" isIOBox="true" Value="Server: broker.emqx.io&#xD;&#xA;TCP Port: 1883&#xD;&#xA;TCP/TLS Port: 8883&#xD;&#xA;Websocket Port: 8083&#xD;&#xA;Websocket/TLS Port: 8084&#xD;&#xA;">
+          <Pad Id="DxoOmi3rXbOMWRIofcwvhd" Bounds="376,66,240,105" ShowValueBox="true" isIOBox="true" Value="WebSocket URI&#xD;&#xA;&#xD;&#xA;test.mosquitto.org:8080/mqtt&#xD;&#xA;test.mosquitto.org:8081/mqtt (TLS 1.2)&#xD;&#xA;broker.emqx.io:8083/mqtt&#xD;&#xA;broker.emqx.io:8084/mqtt    (TLS)&#xD;&#xA;">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:fontsize p:Type="Int32">8</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="KlZxtbknZi7NItcHPXVYBI" Bounds="137,77,138,43" ShowValueBox="true" isIOBox="true" Value="broker.hivemq.com&#xD;&#xA;TCP Port: 1883">
+          <Pad Id="KlZxtbknZi7NItcHPXVYBI" Bounds="127,66,249,86" ShowValueBox="true" isIOBox="true" Value="TCP Server&#xD;&#xA;&#xD;&#xA;broker.hivemq.com   1883&#xD;&#xA;test.mosquitto.org    1883  , 8883 (TLS 1.2)&#xD;&#xA;broker.emqx.io         1883  , 8883 (TLS)">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:fontsize p:Type="Int32">8</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FXSe2cW2A8MM0ZUQYEV8Pf" Comment="UseTLS" Bounds="515,336,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="FXSe2cW2A8MM0ZUQYEV8Pf" Comment="UseTLS" Bounds="617,314,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="UoUFKCdN7uQLGdMVtGj0B4" Comment="SSLProtocols" Bounds="618,412,61,15" ShowValueBox="true" isIOBox="true" Value="Default">
+          <Pad Id="UoUFKCdN7uQLGdMVtGj0B4" Comment="SSLProtocols" Bounds="698,405,61,15" ShowValueBox="true" isIOBox="true" Value="Default">
             <p:TypeAnnotation LastCategoryFullName="System.Security.Authentication" LastSymbolSource="System.dll">
               <Choice Kind="TypeFlag" Name="SslProtocols" />
             </p:TypeAnnotation>
@@ -419,7 +421,11 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="OnOpen" />
             </p:NodeReference>
-            <Pin Id="Gt8qDbtfvusPjhmyF58G9j" Name="Simulate" Kind="InputPin" />
+            <Pin Id="Gt8qDbtfvusPjhmyF58G9j" Name="Simulate" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="QNxH9U5ZZYGQBHRk1Qk3KN" Name="Output" Kind="OutputPin" />
           </Node>
           <ControlPoint Id="IzoXzfUcIBlLJC3XT41y4z" Bounds="64,672" />
@@ -499,8 +505,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Overlay Id="Tta9qUepoOzOvOmCaFR3pQ" Name="Some public MQTT brokers to try..." Bounds="130,15,564,157" />
-          <Overlay Id="Ui5fgCjtCZtNvC2PFbcals" Name="Connecting to a broker" Bounds="124,236,831,409" />
+          <Overlay Id="Tta9qUepoOzOvOmCaFR3pQ" Name="Some public MQTT brokers to try..." Bounds="130,15,691,157" />
+          <Overlay Id="Ui5fgCjtCZtNvC2PFbcals" Name="Connecting to a broker" Bounds="115,216,906,413" />
           <!--
 
     ************************ TakeString ************************
@@ -566,22 +572,22 @@
             </Pin>
             <Pin Id="DpE0DEr6zJoPVfspHi3yAE" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="MrmZL2EO7IVO8OSrRCqJZa" Comment="Username" Bounds="406,394,81,15" ShowValueBox="true" isIOBox="true" Value="">
+          <Pad Id="MrmZL2EO7IVO8OSrRCqJZa" Comment="Username" Bounds="444,366,81,15" ShowValueBox="true" isIOBox="true" Value="">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="OlLc11L4ohaQHcZvJJonVk" Comment="Password" Bounds="459,422,78,15" ShowValueBox="true" isIOBox="true" Value="">
+          <Pad Id="OlLc11L4ohaQHcZvJJonVk" Comment="Password" Bounds="500,392,78,15" ShowValueBox="true" isIOBox="true" Value="">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="AbTXZjZGRRlNnlTTSC2tRz" Comment="AllowUntrustedCertificates" Bounds="567,381,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="AbTXZjZGRRlNnlTTSC2tRz" Comment="AllowUntrustedCertificates" Bounds="660,356,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="K1f8x9n4hnDPVDvWeNdBnh" Bounds="525,72,150,81" ShowValueBox="true" isIOBox="true" Value="Beware - data sent via public brokers is indeed public! Don't use for sensible data.">
+          <Pad Id="K1f8x9n4hnDPVDvWeNdBnh" Bounds="647,68,150,81" ShowValueBox="true" isIOBox="true" Value="Beware - data sent via public brokers is indeed public! Don't use for sensible data.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -820,6 +826,34 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Pad Id="F2j5ZZye5vzMZGXL5mvl9C" Comment="UseWebSockets" Bounds="313,304,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BzIQXQvIEodLirjDMRQCC1" Comment="Websocket URI" Bounds="362,327,162,15" ShowValueBox="true" isIOBox="true" Value="broker.emqx.io:8084/mqtt">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="KBNEa95BhBgNsa575qZ7Mm" Bounds="152,266,70,19" ShowValueBox="true" isIOBox="true" Value="... via TCP">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LnkSaWP1JQ5PO9mwG6Zgp3" Bounds="336,266,215,19" ShowValueBox="true" isIOBox="true" Value="... or (alternatively) via WebSockets">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="LVPgSaJLYOEO2tnxsEZyWa" Name="Create" />
         <Patch Id="OhWfYA8VcReNu2fI2JD6fB" Name="Update" />
@@ -905,8 +939,10 @@
         <Link Id="KKHEFBHwqGZMaoGJFE1Nnj" Ids="AghG1DCBtGvLACA1f4VjNn,Rh3DdptgD9KOxs42yVo6Jm" />
         <Link Id="UKDXbhN2fKYM3YnEWBtQql" Ids="LrmT6s4eWLwQZdutRxhdiL,JqhXpVjRbU5PjLBhLx2xcE" />
         <Link Id="IBKlRG2uxXIO0tKodJWkWv" Ids="BocuUp4vyOsPsmLlmFoJ53,GZIZtAqJAhqQBio2Lty57p" />
+        <Link Id="AYKnHsiMl2iMnyOgwFKuF0" Ids="F2j5ZZye5vzMZGXL5mvl9C,OgGO2RbQJbHOeZg8GXzxgZ" />
+        <Link Id="F8SzKcO645LMRiZRsGJDny" Ids="BzIQXQvIEodLirjDMRQCC1,OSqoKsnmmWiOAKO014SNSS" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="Dt7Y980B8aTPRvhuvF1oOc" Location="VL.IO.MQTTnet" Version="0.0.3-alpha" />
+  <NugetDependency Id="Dt7Y980B8aTPRvhuvF1oOc" Location="VL.IO.MQTTnet" Version="0.0.4-alpha" />
 </Document>

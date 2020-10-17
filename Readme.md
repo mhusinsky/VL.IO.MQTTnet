@@ -6,7 +6,7 @@ MQTT nodes for [VL](https://visualprogramming.net/), based on [MQTTnet](https://
 
 Nodes to publish and subscribe topics with a client node, based on the MQTTnet.Extensions.ManagedClient.
 
-* MQTT over TCP
+* MQTT over TCP and Websockets
 * Supports wildcards in topics (+ and #)
 * Experimental support for TLS (but no certificate loading)
 
@@ -14,9 +14,7 @@ Nodes to publish and subscribe topics with a client node, based on the MQTTnet.E
 
 ### TODO
 
-* MQTT over WebSockets
-
-
+* Certificate Loading
 
 ## Installing
 

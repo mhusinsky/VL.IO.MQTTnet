@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.IO.MQTTnet</id>
-    <version>0.0.4-alpha</version>
+    <version>0.1.0-alpha</version>
     <title></title>
     <authors>Matthias Husinsky</authors>
     <owners></owners>
@@ -10,7 +10,7 @@
     <projectUrl>http://github.com/mhusinsky/VL.IO.MQTTnet</projectUrl>
     <description>An MQTT client for VL, based on MQTTnet.Extensions.ManagedClient.</description>
     <summary>An MQTT client for VL, based on MQTTnet</summary>
-    <releaseNotes>convenience converters and splitters for basic data-types</releaseNotes>
+    <releaseNotes>added WebSocket support and fix for some TLS uses</releaseNotes>
     <dependencies>
       <dependency id="MQTTnet.Extensions.ManagedClient" version="3.0.12" />
     </dependencies>
